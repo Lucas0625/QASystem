@@ -125,7 +125,7 @@ class Predictor(object):
             feature[name] = tf.cast(feature[name], dtype = tf.int32);
         return (feature['input_ids'], feature['segment_ids']), feature['label_ids'];
 
-    def finetune(self, data_dir = None, batch = 32, epochs = 3):
+    def finetune(self, data_dir = None, batch = 32, epochs = 50):
 
         assert type(data_dir) is str;
         # create dataset in tfrecord format.
